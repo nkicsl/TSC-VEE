@@ -1,0 +1,237 @@
+ JUMPDEST 			function transferFrom(address ...
+      PUSH 0			bool success
+      DUP1 			uint256 allowance
+      PUSH 2			allowed
+      PUSH 0			allowed[_from]
+      DUP7 			_from
+      PUSH FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF			allowed[_from]
+      AND 			allowed[_from]
+      PUSH FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF			allowed[_from]
+      AND 			allowed[_from]
+      DUP2 			allowed[_from]
+      MSTORE 			allowed[_from]
+      PUSH 20			allowed[_from]
+      ADD 			allowed[_from]
+      SWAP1 			allowed[_from]
+      DUP2 			allowed[_from]
+      MSTORE 			allowed[_from]
+      PUSH 20			allowed[_from]
+      ADD 			allowed[_from]
+      PUSH 0			allowed[_from]
+      KECCAK256 			allowed[_from]
+      PUSH 0			allowed[_from][msg.sender]
+      CALLER 			msg.sender
+      PUSH FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF			allowed[_from][msg.sender]
+      AND 			allowed[_from][msg.sender]
+      PUSH FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF			allowed[_from][msg.sender]
+      AND 			allowed[_from][msg.sender]
+      DUP2 			allowed[_from][msg.sender]
+      MSTORE 			allowed[_from][msg.sender]
+      PUSH 20			allowed[_from][msg.sender]
+      ADD 			allowed[_from][msg.sender]
+      SWAP1 			allowed[_from][msg.sender]
+      DUP2 			allowed[_from][msg.sender]
+      MSTORE 			allowed[_from][msg.sender]
+      PUSH 20			allowed[_from][msg.sender]
+      ADD 			allowed[_from][msg.sender]
+      PUSH 0			allowed[_from][msg.sender]
+      KECCAK256 			allowed[_from][msg.sender]
+      SLOAD 			allowed[_from][msg.sender]
+      SWAP1 			uint256 allowance = allowed[_f...
+      POP 			uint256 allowance = allowed[_f...
+      DUP3 			_value
+      PUSH 1			balances
+      PUSH 0			balances[_from]
+      DUP8 			_from
+      PUSH FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF			balances[_from]
+      AND 			balances[_from]
+      PUSH FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF			balances[_from]
+      AND 			balances[_from]
+      DUP2 			balances[_from]
+      MSTORE 			balances[_from]
+      PUSH 20			balances[_from]
+      ADD 			balances[_from]
+      SWAP1 			balances[_from]
+      DUP2 			balances[_from]
+      MSTORE 			balances[_from]
+      PUSH 20			balances[_from]
+      ADD 			balances[_from]
+      PUSH 0			balances[_from]
+      KECCAK256 			balances[_from]
+      SLOAD 			balances[_from]
+      LT 			balances[_from] >= _value
+      ISZERO 			balances[_from] >= _value
+      DUP1 			balances[_from] >= _value && a...
+      ISZERO 			balances[_from] >= _value && a...
+      PUSH [tag] 59			balances[_from] >= _value && a...
+      JUMPI 			balances[_from] >= _value && a...
+      POP 			balances[_from] >= _value && a...
+      DUP3 			_value
+      DUP2 			allowance
+      LT 			allowance >= _value
+      ISZERO 			allowance >= _value
+    tag 59			balances[_from] >= _value && a...
+      JUMPDEST 			balances[_from] >= _value && a...
+      ISZERO 			require(balances[_from] >= _va...
+      ISZERO 			require(balances[_from] >= _va...
+      PUSH [tag] 60			require(balances[_from] >= _va...
+      JUMPI 			require(balances[_from] >= _va...
+      PUSH 0			require(balances[_from] >= _va...
+      DUP1 			require(balances[_from] >= _va...
+      REVERT 			require(balances[_from] >= _va...
+    tag 60			require(balances[_from] >= _va...
+      JUMPDEST 			require(balances[_from] >= _va...
+      DUP3 			_value
+      PUSH 1			balances
+      PUSH 0			balances[_to]
+      DUP7 			_to
+      PUSH FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF			balances[_to]
+      AND 			balances[_to]
+      PUSH FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF			balances[_to]
+      AND 			balances[_to]
+      DUP2 			balances[_to]
+      MSTORE 			balances[_to]
+      PUSH 20			balances[_to]
+      ADD 			balances[_to]
+      SWAP1 			balances[_to]
+      DUP2 			balances[_to]
+      MSTORE 			balances[_to]
+      PUSH 20			balances[_to]
+      ADD 			balances[_to]
+      PUSH 0			balances[_to]
+      KECCAK256 			balances[_to]
+      PUSH 0			balances[_to]
+      DUP3 			balances[_to] += _value
+      DUP3 			balances[_to] += _value
+      SLOAD 			balances[_to] += _value
+      ADD 			balances[_to] += _value
+      SWAP3 			balances[_to] += _value
+      POP 			balances[_to] += _value
+      POP 			balances[_to] += _value
+      DUP2 			balances[_to] += _value
+      SWAP1 			balances[_to] += _value
+      SSTORE 			balances[_to] += _value
+      POP 			balances[_to] += _value
+      DUP3 			_value
+      PUSH 1			balances
+      PUSH 0			balances[_from]
+      DUP8 			_from
+      PUSH FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF			balances[_from]
+      AND 			balances[_from]
+      PUSH FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF			balances[_from]
+      AND 			balances[_from]
+      DUP2 			balances[_from]
+      MSTORE 			balances[_from]
+      PUSH 20			balances[_from]
+      ADD 			balances[_from]
+      SWAP1 			balances[_from]
+      DUP2 			balances[_from]
+      MSTORE 			balances[_from]
+      PUSH 20			balances[_from]
+      ADD 			balances[_from]
+      PUSH 0			balances[_from]
+      KECCAK256 			balances[_from]
+      PUSH 0			balances[_from]
+      DUP3 			balances[_from] -= _value
+      DUP3 			balances[_from] -= _value
+      SLOAD 			balances[_from] -= _value
+      SUB 			balances[_from] -= _value
+      SWAP3 			balances[_from] -= _value
+      POP 			balances[_from] -= _value
+      POP 			balances[_from] -= _value
+      DUP2 			balances[_from] -= _value
+      SWAP1 			balances[_from] -= _value
+      SSTORE 			balances[_from] -= _value
+      POP 			balances[_from] -= _value
+      PUSH FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF			2**256 - 1
+      DUP2 			allowance
+      LT 			allowance < MAX_UINT256
+      ISZERO 			if (allowance < MAX_UINT256) {...
+      PUSH [tag] 61			if (allowance < MAX_UINT256) {...
+      JUMPI 			if (allowance < MAX_UINT256) {...
+      DUP3 			_value
+      PUSH 2			allowed
+      PUSH 0			allowed[_from]
+      DUP8 			_from
+      PUSH FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF			allowed[_from]
+      AND 			allowed[_from]
+      PUSH FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF			allowed[_from]
+      AND 			allowed[_from]
+      DUP2 			allowed[_from]
+      MSTORE 			allowed[_from]
+      PUSH 20			allowed[_from]
+      ADD 			allowed[_from]
+      SWAP1 			allowed[_from]
+      DUP2 			allowed[_from]
+      MSTORE 			allowed[_from]
+      PUSH 20			allowed[_from]
+      ADD 			allowed[_from]
+      PUSH 0			allowed[_from]
+      KECCAK256 			allowed[_from]
+      PUSH 0			allowed[_from][msg.sender]
+      CALLER 			msg.sender
+      PUSH FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF			allowed[_from][msg.sender]
+      AND 			allowed[_from][msg.sender]
+      PUSH FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF			allowed[_from][msg.sender]
+      AND 			allowed[_from][msg.sender]
+      DUP2 			allowed[_from][msg.sender]
+      MSTORE 			allowed[_from][msg.sender]
+      PUSH 20			allowed[_from][msg.sender]
+      ADD 			allowed[_from][msg.sender]
+      SWAP1 			allowed[_from][msg.sender]
+      DUP2 			allowed[_from][msg.sender]
+      MSTORE 			allowed[_from][msg.sender]
+      PUSH 20			allowed[_from][msg.sender]
+      ADD 			allowed[_from][msg.sender]
+      PUSH 0			allowed[_from][msg.sender]
+      KECCAK256 			allowed[_from][msg.sender]
+      PUSH 0			allowed[_from][msg.sender]
+      DUP3 			allowed[_from][msg.sender] -= ...
+      DUP3 			allowed[_from][msg.sender] -= ...
+      SLOAD 			allowed[_from][msg.sender] -= ...
+      SUB 			allowed[_from][msg.sender] -= ...
+      SWAP3 			allowed[_from][msg.sender] -= ...
+      POP 			allowed[_from][msg.sender] -= ...
+      POP 			allowed[_from][msg.sender] -= ...
+      DUP2 			allowed[_from][msg.sender] -= ...
+      SWAP1 			allowed[_from][msg.sender] -= ...
+      SSTORE 			allowed[_from][msg.sender] -= ...
+      POP 			allowed[_from][msg.sender] -= ...
+    tag 61			if (allowance < MAX_UINT256) {...
+      JUMPDEST 			if (allowance < MAX_UINT256) {...
+      DUP4 			_to
+      PUSH FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF			Transfer(_from, _to, _value)
+      AND 			Transfer(_from, _to, _value)
+      DUP6 			_from
+      PUSH FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF			Transfer(_from, _to, _value)
+      AND 			Transfer(_from, _to, _value)
+      PUSH DDF252AD1BE2C89B69C2B068FC378DAA952BA7F163C4A11628F55A4DF523B3EF			Transfer(_from, _to, _value)
+      DUP6 			_value
+      PUSH 40			Transfer(_from, _to, _value)
+      MLOAD 			Transfer(_from, _to, _value)
+      DUP1 			Transfer(_from, _to, _value)
+      DUP3 			Transfer(_from, _to, _value)
+      DUP2 			Transfer(_from, _to, _value)
+      MSTORE 			Transfer(_from, _to, _value)
+      PUSH 20			Transfer(_from, _to, _value)
+      ADD 			Transfer(_from, _to, _value)
+      SWAP2 			Transfer(_from, _to, _value)
+      POP 			Transfer(_from, _to, _value)
+      POP 			Transfer(_from, _to, _value)
+      PUSH 40			Transfer(_from, _to, _value)
+      MLOAD 			Transfer(_from, _to, _value)
+      DUP1 			Transfer(_from, _to, _value)
+      SWAP2 			Transfer(_from, _to, _value)
+      SUB 			Transfer(_from, _to, _value)
+      SWAP1 			Transfer(_from, _to, _value)
+      LOG3 			Transfer(_from, _to, _value)
+      PUSH 1			true
+      SWAP2 			return true
+      POP 			return true
+      POP 			function transferFrom(address ...
+      SWAP4 			function transferFrom(address ...
+      SWAP3 			function transferFrom(address ...
+      POP 			function transferFrom(address ...
+      POP 			function transferFrom(address ...
+      POP 			function transferFrom(address ...
+      JUMP [out]			function transferFrom(address ...
