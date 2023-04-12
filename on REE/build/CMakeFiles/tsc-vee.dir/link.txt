@@ -1,0 +1,1 @@
+/usr/bin/cc -g CMakeFiles/tsc-vee.dir/src/cJSON.c.o CMakeFiles/tsc-vee.dir/src/sha3.c.o CMakeFiles/tsc-vee.dir/src/uint256.c.o CMakeFiles/tsc-vee.dir/src/main.c.o -o ../bin/tsc-vee 
