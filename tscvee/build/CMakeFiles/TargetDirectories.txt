@@ -1,3 +1,0 @@
-/home/ubuntu/TSC-VEE/build/CMakeFiles/edit_cache.dir
-/home/ubuntu/TSC-VEE/build/CMakeFiles/rebuild_cache.dir
-/home/ubuntu/TSC-VEE/build/CMakeFiles/tsc-vee.dir

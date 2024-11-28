@@ -1,6 +1,0 @@
-[ 20%] Building C object CMakeFiles/tsc-vee.dir/src/cJSON.c.o
-[ 40%] Building C object CMakeFiles/tsc-vee.dir/src/sha3.c.o
-[ 60%] Building C object CMakeFiles/tsc-vee.dir/src/uint256.c.o
-[ 80%] Building C object CMakeFiles/tsc-vee.dir/src/main.c.o
-[100%] Linking C executable ../bin/tsc-vee
-[100%] Built target tsc-vee
